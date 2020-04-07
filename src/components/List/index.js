@@ -56,10 +56,7 @@ class List extends Component {
     );
   }
 }
-export default connect(
-  state => ({ list: state.list.data, status: state.list.status }),
-  { AdsListRequestAction }
-)(List);
+export default connect(state => ({ list: state.list.data, status: state.list.status }), { AdsListRequestAction })(List);
 
 List.propTypes = {
   AdsListRequestAction: PropTypes.func,
